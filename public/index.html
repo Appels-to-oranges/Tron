@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRON</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- JOIN SCREEN -->
+  <div id="joinScreen">
+    <h1>TRON</h1>
+    <p class="subtitle">Multiplayer Light Cycles</p>
+    <form id="joinForm" autocomplete="off">
+      <input type="text" id="nicknameInput" placeholder="Nickname" maxlength="20" required>
+      <input type="text" id="roomInput" placeholder="Room key (default)" maxlength="30">
+      <button type="submit">Enter Arena</button>
+    </form>
+    <div id="joinError"></div>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div id="gameScreen">
+    <div id="topBar">
+      <span id="roomLabel"></span>
+      <div id="playerList"></div>
+    </div>
+
+    <div id="canvasWrap">
+      <canvas id="gameCanvas"></canvas>
+
+      <div id="overlay">
+        <div id="overlayTitle">Waiting for players...</div>
+        <div id="overlaySubtitle"></div>
+        <button id="overlayBtn" style="display:none">Start Game</button>
+      </div>
+
+      <div id="countdownDisplay" class="hidden"></div>
+    </div>
+
+    <div id="controlsHint">Arrow keys or WASD to steer</div>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>

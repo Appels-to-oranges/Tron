@@ -1,0 +1,13 @@
+{
+  "name": "tron",
+  "version": "1.0.0",
+  "description": "Multiplayer Tron light-cycle game with WebSocket rooms",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "ws": "^8.18.0"
+  }
+}
