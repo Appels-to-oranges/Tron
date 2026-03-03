@@ -90,6 +90,35 @@ html, body {
   transform: translateY(-0.0625rem);
 }
 
+.gameTypeSelect {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.gameTypeOption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: 0.0625rem solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  transition: border-color .2s;
+}
+
+.gameTypeOption:hover {
+  border-color: var(--cyan);
+}
+
+.gameTypeOption input:checked + .gameTypeLabel {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.gameTypeOption input { display: none; }
+
 #joinError {
   color: #ff4466;
   font-size: 0.9rem;
@@ -117,9 +146,13 @@ html, body {
   flex-shrink: 0;
 }
 
-#roomLabel {
+#roomLabel, #gameTypeLabel {
   font-size: 0.85rem;
   color: #555;
+}
+
+#gameTypeLabel {
+  text-transform: capitalize;
 }
 
 #playerList {

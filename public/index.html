@@ -3,18 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TRON</title>
+  <title>TRON & Frogger</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- JOIN SCREEN -->
   <div id="joinScreen">
-    <h1>TRON</h1>
-    <p class="subtitle">Multiplayer Light Cycles</p>
+    <h1>TRON & Frogger</h1>
+    <p class="subtitle">Multiplayer Arcade</p>
     <form id="joinForm" autocomplete="off">
       <input type="text" id="nicknameInput" placeholder="Nickname" maxlength="20" required>
       <input type="text" id="roomInput" placeholder="Room key (default)" maxlength="30">
+      <div class="gameTypeSelect">
+        <label class="gameTypeOption">
+          <input type="radio" name="gameType" value="tron" checked>
+          <span class="gameTypeLabel">Tron</span>
+        </label>
+        <label class="gameTypeOption">
+          <input type="radio" name="gameType" value="frogger">
+          <span class="gameTypeLabel">Frogger</span>
+        </label>
+      </div>
       <button type="submit">Enter Arena</button>
     </form>
     <div id="joinError"></div>
@@ -24,6 +34,7 @@
   <div id="gameScreen">
     <div id="topBar">
       <span id="roomLabel"></span>
+      <span id="gameTypeLabel"></span>
       <div id="playerList"></div>
     </div>
 
